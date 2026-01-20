@@ -35,6 +35,7 @@ spec:
   - name: alpine
     image: alpine:3.20
     command: ['sleep', '3600']
+    workingDir: /home/jenkins/agent/workspace
     resources:
       requests:
         cpu: 50m
