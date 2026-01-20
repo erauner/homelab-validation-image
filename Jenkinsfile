@@ -32,6 +32,13 @@ spec:
       limits:
         cpu: 500m
         memory: 512Mi
+  - name: alpine
+    image: alpine:3.20
+    command: ['sleep', '3600']
+    resources:
+      requests:
+        cpu: 50m
+        memory: 64Mi
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug
     command: ['sleep', '3600']
@@ -89,7 +96,7 @@ spec:
         stage('Create Release Tag') {
             // No branch condition needed - job is configured to only pull from main
             steps {
-                container('kaniko') {
+                container('alpine') {
                     withCredentials([usernamePassword(
                         credentialsId: 'github-app',
                         usernameVariable: 'GIT_USER',
