@@ -39,6 +39,9 @@ spec:
       requests:
         cpu: 50m
         memory: 64Mi
+      limits:
+        cpu: 200m
+        memory: 128Mi
   - name: kaniko
     image: gcr.io/kaniko-project/executor:debug
     command: ['sleep', '3600']
