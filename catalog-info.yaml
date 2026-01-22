@@ -4,7 +4,7 @@ metadata:
   name: homelab-validation-image
   description: Container image with validation tools for CI/CD pipelines (kustomize, kubeconform, kyverno, promtool)
   annotations:
-    github.com/project-slug: erauner12/homelab-validation-image
+    github.com/project-slug: erauner/homelab-validation-image
     jenkins.io/job-full-name: erauner/homelab-validation-image/main
     homelab.dev/manifest-name: homelab-validation-image
   tags:
@@ -13,7 +13,7 @@ metadata:
     - ci-cd
     - kubernetes
   links:
-    - url: https://github.com/erauner12/homelab-validation-image
+    - url: https://github.com/erauner/homelab-validation-image
       title: GitHub Repository
 spec:
   type: library
