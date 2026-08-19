@@ -15,7 +15,7 @@
 # =============================================================================
 # Build stage - install Go tools from Athens proxy
 # =============================================================================
-FROM golang:1.25-alpine AS builder
+FROM golang:1.27-alpine AS builder
 
 WORKDIR /build
 
@@ -37,7 +37,7 @@ RUN GOBIN=/tools go install github.com/jstemmer/go-junit-report/v2@latest
 # =============================================================================
 # Runtime stage - install all validation tools
 # =============================================================================
-FROM golang:1.25-alpine
+FROM golang:1.27-alpine
 
 # Tool versions - pinned for reproducibility
 # Keep in sync with Jenkinsfile environment variables
